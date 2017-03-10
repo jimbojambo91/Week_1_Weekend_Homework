@@ -71,7 +71,7 @@ def customer_can_afford_pet(customer, new_pet)
 end
 
 def sell_pet_to_customer(pet_shop, pet, customer)
-  return if find_pet_by_name(pet_shop, pet) == nil ||
+  return if pet == nil ||
  customer_can_afford_pet(customer, pet) == false
 
   amount = pet[:price]
